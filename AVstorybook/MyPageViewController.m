@@ -25,11 +25,11 @@
     self.dataSource = self;
     self.delegate = self;
     
-    StoryPartViewController *story1 = [self.storyboard instantiateViewControllerWithIdentifier:@"storyPart"];
-    StoryPartViewController *story2 = [self.storyboard instantiateViewControllerWithIdentifier:@"storyPart"];
-    StoryPartViewController *story3 = [self.storyboard instantiateViewControllerWithIdentifier:@"storyPart"];
-    StoryPartViewController *story4 = [self.storyboard instantiateViewControllerWithIdentifier:@"storyPart"];
-    StoryPartViewController *story5 = [self.storyboard instantiateViewControllerWithIdentifier:@"storyPart"];
+    StoryPartViewController *story1 = [self.storyboard instantiateViewControllerWithIdentifier:@"storyPage"];
+    StoryPartViewController *story2 = [self.storyboard instantiateViewControllerWithIdentifier:@"storyPage"];
+    StoryPartViewController *story3 = [self.storyboard instantiateViewControllerWithIdentifier:@"storyPage"];
+    StoryPartViewController *story4 = [self.storyboard instantiateViewControllerWithIdentifier:@"storyPage"];
+    StoryPartViewController *story5 = [self.storyboard instantiateViewControllerWithIdentifier:@"storyPage"];
     
     self.storyViewControllerArray = @[story1,story2,story3,story4,story5];
     self.modelArray = [NSMutableArray new];
@@ -82,7 +82,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

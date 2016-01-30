@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RgG-98-HSJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--My Page View Controller-->
@@ -16,7 +17,7 @@
         <!--Story Part View Controller-->
         <scene sceneID="xWA-7R-NKb">
             <objects>
-                <viewController id="gAp-8y-lAP" customClass="StoryPartViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="storyPage" id="gAp-8y-lAP" customClass="StoryPartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZNP-Zb-sgL"/>
                         <viewControllerLayoutGuide type="bottom" id="mcJ-WX-ihZ"/>
@@ -24,8 +25,58 @@
                     <view key="view" contentMode="scaleToFill" id="842-wm-exl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kzg-Vz-0pN">
+                                <rect key="frame" x="175" y="175" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="MdI-Cg-ajF"/>
+                                    <constraint firstAttribute="height" constant="250" id="WOs-Bn-oxM"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAy-Af-u09">
+                                <rect key="frame" x="108" y="472" width="64" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="getCamera:" destination="gAp-8y-lAP" eventType="touchUpInside" id="TPh-O7-0PZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eub-2a-0Pz">
+                                <rect key="frame" x="279" y="527" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gd-UE-Ljc">
+                                <rect key="frame" x="419" y="472" width="94" height="30"/>
+                                <state key="normal" title="Microphone"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kzg-Vz-0pN" firstAttribute="centerX" secondItem="842-wm-exl" secondAttribute="centerX" id="1Sr-i9-KqV"/>
+                            <constraint firstItem="UAy-Af-u09" firstAttribute="top" secondItem="kzg-Vz-0pN" secondAttribute="bottom" constant="47" id="ACg-ee-uf2"/>
+                            <constraint firstItem="kzg-Vz-0pN" firstAttribute="centerY" secondItem="842-wm-exl" secondAttribute="centerY" id="B4m-5C-zeq"/>
+                            <constraint firstItem="UAy-Af-u09" firstAttribute="leading" secondItem="842-wm-exl" secondAttribute="leadingMargin" constant="88" id="ECQ-dU-ZpI"/>
+                            <constraint firstItem="mcJ-WX-ihZ" firstAttribute="top" secondItem="eub-2a-0Pz" secondAttribute="bottom" constant="52" id="GJO-01-jES"/>
+                            <constraint firstItem="UAy-Af-u09" firstAttribute="leading" secondItem="842-wm-exl" secondAttribute="leadingMargin" constant="155" id="HHK-hq-KP1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6gd-UE-Ljc" secondAttribute="trailing" constant="155" id="O8O-CH-0FK"/>
+                            <constraint firstItem="eub-2a-0Pz" firstAttribute="centerX" secondItem="842-wm-exl" secondAttribute="centerX" id="ZfT-gI-fN6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6gd-UE-Ljc" secondAttribute="trailing" constant="67" id="oAR-hS-90M"/>
+                            <constraint firstItem="6gd-UE-Ljc" firstAttribute="top" secondItem="kzg-Vz-0pN" secondAttribute="bottom" constant="47" id="oPK-uA-t52"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HHK-hq-KP1"/>
+                                <exclude reference="O8O-CH-0FK"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="UAy-Af-u09" id="LId-AK-zWL"/>
+                        <outlet property="imageView" destination="kzg-Vz-0pN" id="3FS-LR-hoX"/>
+                        <outlet property="micButton" destination="6gd-UE-Ljc" id="Pht-fi-702"/>
+                        <outlet property="pageLabel" destination="eub-2a-0Pz" id="kod-Gx-SVu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpN-NV-gFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *micButton;
 @property (weak, nonatomic) IBOutlet UILabel *pageLabel;
 
+- (IBAction)getCamera:(id)sender;
+
 @end
 
 @implementation StoryPartViewController
@@ -74,8 +76,8 @@
     }
 }
 
-- (IBAction)grabPicture:(UIButton *)sender {
-    self.imagePicker = [UIImagePickerController new];
+- (IBAction)getCamera:(UIButton *)sender {
+    self.imagePicker = [[UIImagePickerController alloc]init];
     self.imagePicker.delegate = self;
     self.imagePicker.allowsEditing = YES;
     
@@ -94,10 +96,10 @@
     if ([self.micButton.titleLabel.text isEqualToString:@"Start Recording"]) {
         [self.micButton setTitle:@"Stop Recording" forState:UIControlStateNormal];
         
-        NSString *dirPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true)[0];
+        NSString *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true)[0];
         NSString *recordingName = @"avstorybookaudio_";
         recordingName = [recordingName stringByAppendingString:[NSString stringWithFormat:@"%i",[self.model getPage]]];
-        NSArray *pathArray = @[dirPath,recordingName];
+        NSArray *pathArray = @[directoryPath,recordingName];
         NSURL *filePath  = [NSURL fileURLWithPathComponents:pathArray];
         
         self.session = [AVAudioSession sharedInstance];
@@ -108,7 +110,6 @@
         [recordSetting setValue :[NSNumber numberWithInt:kAudioFormatLinearPCM] forKey:AVFormatIDKey];
         [recordSetting setValue:[NSNumber numberWithFloat:44100.0] forKey:AVSampleRateKey];
         [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
-        
         [recordSetting setValue :[NSNumber numberWithInt:16] forKey:AVLinearPCMBitDepthKey];
         [recordSetting setValue :[NSNumber numberWithBool:NO] forKey:AVLinearPCMIsBigEndianKey];
         [recordSetting setValue :[NSNumber numberWithBool:NO] forKey:AVLinearPCMIsFloatKey];
