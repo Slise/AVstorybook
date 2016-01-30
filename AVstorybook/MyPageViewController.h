@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MyPageViewController.h
 //  AVstorybook
 //
 //  Created by Benson Huynh on 2016-01-29.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MyPageViewController : UIPageViewController
 
 @end
-

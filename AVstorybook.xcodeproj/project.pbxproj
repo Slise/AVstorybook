@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		93CD3AF81C5C234100F20766 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CD3AF71C5C234100F20766 /* main.m */; };
 		93CD3AFB1C5C234100F20766 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CD3AFA1C5C234100F20766 /* AppDelegate.m */; };
-		93CD3AFE1C5C234100F20766 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CD3AFD1C5C234100F20766 /* ViewController.m */; };
 		93CD3B011C5C234100F20766 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CD3AFF1C5C234100F20766 /* Main.storyboard */; };
 		93CD3B031C5C234100F20766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93CD3B021C5C234100F20766 /* Assets.xcassets */; };
 		93CD3B061C5C234100F20766 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CD3B041C5C234100F20766 /* LaunchScreen.storyboard */; };
 		93CD3B111C5C234200F20766 /* AVstorybookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CD3B101C5C234200F20766 /* AVstorybookTests.m */; };
 		93CD3B1C1C5C234200F20766 /* AVstorybookUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CD3B1B1C5C234200F20766 /* AVstorybookUITests.m */; };
+		93CD3B2B1C5C34AD00F20766 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CD3B2A1C5C34AD00F20766 /* Model.m */; };
+		93CD3B2E1C5C358A00F20766 /* StoryPartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CD3B2D1C5C358A00F20766 /* StoryPartViewController.m */; };
+		93CD3B311C5C385D00F20766 /* MyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CD3B301C5C385D00F20766 /* MyPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 		93CD3AF71C5C234100F20766 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93CD3AF91C5C234100F20766 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93CD3AFA1C5C234100F20766 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		93CD3AFC1C5C234100F20766 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		93CD3AFD1C5C234100F20766 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		93CD3B001C5C234100F20766 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93CD3B021C5C234100F20766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93CD3B051C5C234100F20766 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,12 @@
 		93CD3B171C5C234200F20766 /* AVstorybookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVstorybookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CD3B1B1C5C234200F20766 /* AVstorybookUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVstorybookUITests.m; sourceTree = "<group>"; };
 		93CD3B1D1C5C234200F20766 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93CD3B291C5C34AD00F20766 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		93CD3B2A1C5C34AD00F20766 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		93CD3B2C1C5C358A00F20766 /* StoryPartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryPartViewController.h; sourceTree = "<group>"; };
+		93CD3B2D1C5C358A00F20766 /* StoryPartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryPartViewController.m; sourceTree = "<group>"; };
+		93CD3B2F1C5C385D00F20766 /* MyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPageViewController.h; sourceTree = "<group>"; };
+		93CD3B301C5C385D00F20766 /* MyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +109,13 @@
 			children = (
 				93CD3AF91C5C234100F20766 /* AppDelegate.h */,
 				93CD3AFA1C5C234100F20766 /* AppDelegate.m */,
-				93CD3AFC1C5C234100F20766 /* ViewController.h */,
-				93CD3AFD1C5C234100F20766 /* ViewController.m */,
+				93CD3B2F1C5C385D00F20766 /* MyPageViewController.h */,
+				93CD3B301C5C385D00F20766 /* MyPageViewController.m */,
+				93CD3B2C1C5C358A00F20766 /* StoryPartViewController.h */,
+				93CD3B2D1C5C358A00F20766 /* StoryPartViewController.m */,
 				93CD3AFF1C5C234100F20766 /* Main.storyboard */,
+				93CD3B291C5C34AD00F20766 /* Model.h */,
+				93CD3B2A1C5C34AD00F20766 /* Model.m */,
 				93CD3B021C5C234100F20766 /* Assets.xcassets */,
 				93CD3B041C5C234100F20766 /* LaunchScreen.storyboard */,
 				93CD3B071C5C234100F20766 /* Info.plist */,
@@ -273,9 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93CD3AFE1C5C234100F20766 /* ViewController.m in Sources */,
+				93CD3B311C5C385D00F20766 /* MyPageViewController.m in Sources */,
 				93CD3AFB1C5C234100F20766 /* AppDelegate.m in Sources */,
 				93CD3AF81C5C234100F20766 /* main.m in Sources */,
+				93CD3B2B1C5C34AD00F20766 /* Model.m in Sources */,
+				93CD3B2E1C5C358A00F20766 /* StoryPartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
